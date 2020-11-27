@@ -8,7 +8,7 @@ metadata:
 spec:
   project: default
   source:
-    path: helm
+    path: app
     repoURL: https://github.com/keszi000/test-env.git
     targetRevision: HEAD
   destination:
