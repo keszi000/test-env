@@ -16,7 +16,7 @@ spec:
         image:
           tag: latest
         ingress:
-          enabled: false
+          enabled: true
           host: nginx.127.0.0.1.xip.io
   destination:
     namespace: m-test-1
