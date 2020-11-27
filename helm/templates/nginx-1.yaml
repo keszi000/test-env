@@ -16,7 +16,7 @@ spec:
         image:
           tag: latest
         ingress:
-          enabled: true
+          enabled: false
           host: nginx.127.0.0.1.xip.io
 
   destination:
