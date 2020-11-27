@@ -13,6 +13,7 @@ spec:
     targetRevision: HEAD
     helm:
       values: |
+        replicaCount: 5
         image:
           tag: latest
         ingress:
