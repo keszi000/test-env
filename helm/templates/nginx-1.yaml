@@ -16,8 +16,7 @@ spec:
         image:
           tag: latest
         ingress:
-          hosts:
-            - host: nginx.localhost.xip.io
+          host: nginx.localhost.xip.io
   destination:
     namespace: m-test-1
     server: https://kubernetes.default.svc
