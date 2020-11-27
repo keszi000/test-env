@@ -1,0 +1,27 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: m-test-1
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argproj.io
+spec:
+  project: default
+  source:
+    path: nginx-1
+    repoURL: https://github.com/keszi000/infra-test.git
+    targetRevision: HEAD
+    helm:
+      values: |
+        image:
+          tag: latest
+        ingress:
+          hosts:
+            - host: nginx.localhost.xip.io
+  destination:
+    namespace: m-test-1
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true

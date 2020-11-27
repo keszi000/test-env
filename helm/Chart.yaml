@@ -1,0 +1,6 @@
+apiVersion: v2
+name: m-test-1
+description: gitops test repository
+type: application
+version: 1.0.0
+appVersion: 1.0.0
