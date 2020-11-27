@@ -17,9 +17,8 @@ spec:
           tag: latest
         ingress:
           enabled: true
-          hosts:
-            - host: nginx.127.0.0.1.xip.io
-              path: ["/"]
+          host: nginx.127.0.0.1.xip.io
+
   destination:
     namespace: m-test-1
     server: https://kubernetes.default.svc
