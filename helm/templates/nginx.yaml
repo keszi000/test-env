@@ -1,15 +1,15 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: nginx-1
+  name: nginx
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argproj.io
 spec:
   project: default
   source:
-    path: nginx-1
-    repoURL: https://github.com/keszi000/infra-test.git
+    path: nginx
+    repoURL: https://github.com/keszi000/components.git
     targetRevision: HEAD
     helm:
       values: |
@@ -20,7 +20,7 @@ spec:
           enabled: true
           host: nginx.127.0.0.1.xip.io
   destination:
-    namespace: m-test-1
+    namespace: test
     server: https://kubernetes.default.svc
   syncPolicy:
     automated:
