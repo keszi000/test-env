@@ -13,7 +13,7 @@ spec:
     targetRevision: HEAD
     helm:
       values: |
-        replicaCount: 2
+        replicaCount: 5
         image:
           tag: {{ .Values.demoapp.version }}
         ingress:
