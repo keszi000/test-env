@@ -15,10 +15,10 @@ spec:
       values: |
         replicaCount: 2
         image:
-          tag: latest
+          tag: {{ .Values.nginx.version }}
         ingress:
           enabled: true
-          host: nginx.127.0.0.1.nip.io
+          host: {{ .Values.nginx.host }}
   destination:
     namespace: test
     server: https://kubernetes.default.svc
