@@ -1,5 +1,5 @@
 demoapp:
-  version: latest
+  version: latest2
   host: demo.127.0.0.1.nip.io
 nginx:
   version: latest
