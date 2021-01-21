@@ -3,8 +3,6 @@ kind: Application
 metadata:
   name: test-app-services
   namespace: argocd
-  finalizers:
-    - resources-finalizer.argocd.argproj.io
 spec:
   project: default
   source:
